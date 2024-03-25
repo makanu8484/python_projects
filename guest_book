@@ -1,0 +1,12 @@
+file_name = "guest_book.txt"
+
+while True:
+    name = input("Please enter your name\n(enter 'q' at any time to exit!): ")
+    if name == 'q':
+        break
+    print("Welcome " + name.title() + "!")
+
+    with open(file_name, "a") as file_object:
+        file_object.write(name.title() + "\n")
+
+print("Thank you for visiting!")
